@@ -7,10 +7,10 @@ class Database {
 
 
     //Db credentials
-    private $host = '61.129.33.79';
+    private $host = '127.0.0.1';
     private $db_name = 'demo';
     private $username = 'demo';
-    private $password = 'aseraser';
+    private $password = 'demo';
 
     public $conn;
 
