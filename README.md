@@ -4,11 +4,18 @@
 也是拿来研究，改写了部分。
 
 **创建数据库**
-(`` ) CREATE TABLE IF NOT EXISTS `categories` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(256) NOT NULL, `description` text NOT NULL, `created` datetime NOT NULL, `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ; ( ``)
-(`` ) CREATE TABLE IF NOT EXISTS `products` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(32) NOT NULL, `description` text NOT NULL, `price` decimal(10,0) NOT NULL, `category_id` int(11) NOT NULL, `created` datetime NOT NULL, `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf-8 AUTO_INCREMENT=65 ; ( ``)
+
+```
+ CREATE TABLE IF NOT EXISTS `categories` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(256) NOT NULL, `description` text NOT NULL, `created` datetime NOT NULL, `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+```
+
+```
+ CREATE TABLE IF NOT EXISTS `products` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(32) NOT NULL, `description` text NOT NULL, `price` decimal(10,0) NOT NULL, `category_id` int(11) NOT NULL, `created` datetime NOT NULL, `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf-8 AUTO_INCREMENT=65 ;
+```
 
 **插入数据**
-(```)
+
+```
 CREATE TABLE IF NOT EXISTS `categories` (
 INSERT INTO `categories` (`id`, `name`, `description`, `created`, `modified`) VALUES
 (1, 'Fashion', 'Category for anything related to fashion.', '2014-06-01 00:35:07', '2014-05-30 17:34:33'),
@@ -18,7 +25,9 @@ INSERT INTO `categories` (`id`, `name`, `description`, `created`, `modified`) VA
 (6, 'Books', 'Kindle books, audio books and more.', '0000-00-00 00:00:00', '2016-01-08 13:27:47'),
 (13, 'Sports', 'Drop into new winter gear.', '2016-01-09 02:24:24', '2016-01-09 01:24:24');
 
-(`) (`)
+```
+
+```
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `category_id`, `created`, `modified`) VALUES
 (1, 'LG P880 4X HD', 'My first awesome phone!', '336', 3, '2014-06-01 01:12:26', '2014-05-31 17:12:26'),
 (2, 'Google Nexus 4', 'The most awesome phone of 2013!', '299', 2, '2014-06-01 01:12:26', '2014-05-31 17:12:26'),
@@ -38,4 +47,4 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `category_id`, `cr
 (48, 'Bristol Shoes', 'Awesome shoes.', '999', 5, '2016-01-08 06:36:37', '2016-01-08 05:36:37'),
 (60, 'Rolex Watch', 'Luxury watch.', '25000', 1, '2016-01-11 15:46:02', '2016-01-11 14:46:02');
 
-(```)
+```
